@@ -2799,7 +2799,16 @@ async function bootstrap() {
   }
   initApp();
 }
+const ACCESS_CODE = "LIFEPLANNED2026";
 
+const entered = prompt("Enter access code to open your Emergency Binder:");
+
+if (entered === ACCESS_CODE) {
+    bootstrap();
+} else {
+    document.body.innerHTML =
+        "<h2>Access denied</h2><p>Please refresh the page and try again.</p>";
+}
 bootstrap();
 </script>
 </body>
